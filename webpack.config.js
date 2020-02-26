@@ -9,6 +9,7 @@ const ImageMinWebpackPlugin = require('imagemin-webpack-plugin').default;
 const imageminMozjpeg = require ('imagemin-mozjpeg');
 const imageminPngquant = require('imagemin-pngquant');
 
+const filename = ext => isDev ? `[name].${ext}` : `[name].[hash].${ext}`;
 const isDev = process.env.NODE_ENV === 'development';
 const makeCopiesOfFiles = (path) => {
   return {
@@ -22,12 +23,12 @@ module.exports = {
   mode: 'development',
   entry: ['@babel/polyfill', './js/script.js'],
   output: {
-    filename: 'bundle.js',
+    filename: filename('js'),
     path: path.resolve(__dirname, 'dist')
   },
   plugins: [
     new HTMLWebpackPlugin({
-      filename: 'index.html',
+      filename: filename('html'),
       template: './index.html',
       minify: {
         collapseWhitespace: !isDev
@@ -36,7 +37,6 @@ module.exports = {
     new CleanWebpackPlugin(),
     new CopyWPPlugin([
       makeCopiesOfFiles('img'),
-      makeCopiesOfFiles('logo'),
     ]),
     new ImageMinWebpackPlugin({
       test: /\.(jpe?g|png|gif|svg)$/i,
@@ -50,7 +50,7 @@ module.exports = {
       ]
     }),
     new MiniCssExtractPlugin({
-      filename: '[name].css'
+      filename: filename('css')
     })
   ],
   optimization: {
