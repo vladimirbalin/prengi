@@ -1,0 +1,51 @@
+.cards {
+  min-height: 896px;
+  padding: 79px 0 0 0;
+  &__item {
+    position: relative;
+    width: 360px;
+    height: 255px;
+    border: 1.0px solid #ececec;
+  }
+  &__descr {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    margin-bottom: 37px;
+    width: 215px;
+    &-700{
+      font-weight: 700;
+    }
+  }
+  h2{
+    text-align: center;
+    font-size: 48.1px;
+    line-height: 30px;
+    font-weight: 700;
+    color: #393939;
+    margin: 155px 0 37px 0;
+    position: relative;
+    &:before{
+      content: '';
+      width: 169px;
+      height: 50px;
+      background: url('../img/01.svg') center center/cover no-repeat;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      top: -81px;
+    }
+    &:after{
+      content: '';
+      width: 169px;
+      height: 50px;
+      background: url('../img/01.svg') center center/cover no-repeat;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      top: -105px;
+    }
+  }
+}

@@ -1,0 +1,32 @@
+.storage {
+  min-height: 580px;
+  background: url('../img/bcgr03.jpg') center center/cover no-repeat;
+  padding: 79px 0 0 0;
+  &__content {
+    display: flex;
+  }
+  &__item {
+    margin-top: 130px;
+    padding-left: 30px;
+    h2{
+      font-size: 30px;
+      line-height: 22px;
+      font-weight: 900;
+      text-transform: uppercase;
+      color: #ffffff;
+
+    }
+    &-left{
+      text-align: right;
+      padding-right: 10px;
+    }
+  }
+  &__descr {
+    font-size: 18px;
+    line-height: 26px;
+    font-weight: 300;
+    color: #ffffff;
+  }
+}
+.title {
+}

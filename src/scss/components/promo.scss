@@ -1,0 +1,51 @@
+.promo {
+  min-height: 700px;
+  background: url('../img/bcgr01.jpg') center center/cover no-repeat;
+  padding: 39px 0 0 0;
+  h1{
+    font-size: 42px;
+    line-height: 48px;
+    font-weight: 900;
+    color: #ffffff;
+  }
+  &-400{
+    font-weight: 400;
+  }
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__logo {}
+  &__menu {
+    font-size: 13px;
+    line-height: 26px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #ffffff;
+    a {
+      color: #fff;
+      padding-left: 45px;
+      &:hover {
+        color: #00d1ff;
+        transition: .5s color;
+        text-decoration: none;
+      }
+    }
+  }
+  &__content {
+    margin-top: 133px;
+  }
+  &__descr {
+    display: block;
+    margin-top: 27px;
+    font-size: 24px;
+    line-height: 30px;
+    font-weight: 300;
+    color: #ffffff;
+  }
+  .button {
+    margin-top: 35px;
+  }
+}
+

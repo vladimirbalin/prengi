@@ -1,0 +1,54 @@
+.footer {
+  padding: 49px 0 40px 0;
+  background-color: #0082a1;
+  &__subtitle {
+    font-size: 16px;
+    line-height: 19px;
+    font-weight: 700;
+    color: #ffffff;
+  }
+  &__descr {
+    font-size: 14px;
+    font-weight: 300;
+    color: #ffffff;
+  }
+  a{
+    display: block;
+    font-size: 14px;
+    font-weight: 300;
+    color: #ffffff;
+  }
+  img{
+    display: block;
+    margin: 20px 0;
+  }
+  &__copyright{
+    margin-top: 81px;
+    font-size: 13px;
+    line-height: 17px;
+    font-weight: 300;
+    color: #ffffff;
+    text-align: center;
+    position: relative;
+    &:before{
+      content: '';
+      position: absolute;
+      background-color: #ffffff;
+      width: 1171px;
+      height: 1px;
+      opacity: 0.3;
+      top: -36px;
+      left: 0;
+    }
+  }
+}
+.container {
+}
+.row {
+}
+.col-4 {
+}
+.col-3 {
+}
+.col-2 {
+}

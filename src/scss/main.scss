@@ -1,0 +1,17 @@
+@import "../fonts/stylesheet.css";
+@import "bootstrap-grid.min.css";
+@import "bootstrap-reboot.min.css";
+@import "./components/header";
+@import "components/button";
+@import "components/promo";
+@import "components/cards";
+@import "components/decisions";
+@import "components/title";
+@import "components/advantages";
+@import "components/storage";
+@import "components/getaccess";
+@import "components/footer";
+
+* {
+  font-family: Roboto;
+}

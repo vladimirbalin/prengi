@@ -1,0 +1,32 @@
+.decisions {
+  min-height: 890px;
+  background: url('../img/bcgr02.jpg') center center/cover no-repeat;
+  padding: 79px 0 65px 0;
+  &__tabs {
+    border: 1.0px solid #ffffff;
+    display: flex;
+    justify-content: space-around;
+    border-radius: 5px;
+    margin-top: 25px;
+  }
+  &__tab-item {
+    display: block;
+    color: #ffffff;
+    margin: 26px 0 24px 0;
+    &:hover{
+      color: #00c2f0;
+      text-decoration: none;
+      transition: .2s color;
+    }
+  }
+  &__slider {
+    margin-top: 36px;
+    img{
+      display: block;
+      margin: 0 auto;
+    }
+
+  }
+}
+.container {
+}
