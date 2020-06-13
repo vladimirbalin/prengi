@@ -3,21 +3,42 @@
   background: url('../img/bcgr02.jpg') center center/cover no-repeat;
   padding: 79px 0 65px 0;
   &__tabs {
+    max-width: 80%;
     border: 1.0px solid #ffffff;
     display: flex;
     justify-content: space-around;
     border-radius: 5px;
+    margin: 0 auto;
     margin-top: 25px;
+  }
+  &__list-item{
+    list-style: none;
+    position: relative;
+    &:not(:last-child){
+      &:after{
+        content: '';
+        position: absolute;
+        right: -30px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 2px;
+        height: 50px;
+        background-color: #a7a8a5;
+      }
+    }
   }
   &__tab-item {
     display: block;
     color: #ffffff;
     margin: 26px 0 24px 0;
+    text-decoration: none;    
+    transition: .5s color;
     &:hover{
       color: #00c2f0;
       text-decoration: none;
-      transition: .2s color;
+      transition: .5s color;
     }
+    
   }
   &__slider {
     margin-top: 36px;

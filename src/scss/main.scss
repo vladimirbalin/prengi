@@ -1,15 +1,6 @@
 @import "normalize.scss";
 @import "../fonts/stylesheet.css";
-@import "./components/header";
-@import "components/button";
-@import "components/promo";
-@import "components/cards";
-@import "components/decisions";
-@import "components/title";
-@import "components/advantages";
-@import "components/storage";
-@import "components/getaccess";
-@import "components/footer";
+
 
 $screen-sm: 576px;
 $screen-md: 768px;
@@ -18,6 +9,11 @@ $screen-xl: 1200px;
 
 * {
   font-family: Roboto;
+  box-sizing: border-box;
+}
+ul,p{
+  padding: 0;
+  margin: 0;
 }
 
 .section-outer{
@@ -28,3 +24,14 @@ $screen-xl: 1200px;
   max-width: 1140px;
   margin: 0 auto;
 }
+@import "components/first-page";
+@import "components/header";
+@import "components/button";
+@import "components/promo";
+@import "components/cards";
+@import "components/decisions";
+@import "components/title";
+@import "components/advantages";
+@import "components/storage";
+@import "components/getaccess";
+@import "components/footer";
