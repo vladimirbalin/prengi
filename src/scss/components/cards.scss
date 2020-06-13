@@ -1,8 +1,14 @@
 .cards {
   min-height: 896px;
   padding: 79px 0 0 0;
+  &__content{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
   &__item {
     position: relative;
+    flex-basis: 30%;
     width: 360px;
     height: 255px;
     border: 1.0px solid #ececec;

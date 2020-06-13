@@ -1,15 +1,24 @@
 .advantages {
   min-height: 1334px;
   padding: 81px 0 80px 0;
+  &__cards-content{
+    display: flex;
+    flex-wrap: wrap;
+  }
   &__card {
+    flex-basis: 50%;
+    max-height: 355px;
     position: relative;
+    img{
+      max-width: 100%;
+    }
   }
   &__block {
     position: absolute;
     top:50%;
     left: 0;
     transform: translateY(-50%);
-    width: 570px;
+    width: 100%;
     height: 156px;
     background-color: rgba(#000000, .43);
     text-align: center;
@@ -27,13 +36,4 @@
   .title {
     margin-bottom: 44px;
   }
-}
-.container {
-}
-
-.title-black {
-}
-.row {
-}
-.col-6 {
 }

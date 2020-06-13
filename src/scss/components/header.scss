@@ -1,7 +1,6 @@
 .header {
   max-height: 85px;
   padding: 19px 0 16px 0;
-
   &__wrap {
     display: flex;
     justify-content: space-between;
@@ -24,5 +23,6 @@
   &__adresses {
     font-size: 12px;
     font-weight: 300;
+    margin-top: 5px;
   }
 }

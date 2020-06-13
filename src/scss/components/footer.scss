@@ -1,6 +1,22 @@
 .footer {
   padding: 49px 0 40px 0;
   background-color: #0082a1;
+  &__content{
+    display: flex;
+    justify-content: space-between;
+  }
+  &__item:nth-child(1){
+    flex-basis: 377px;
+  }
+  &__item:nth-child(2){
+    flex-basis: 263px;
+  }
+  &__item:nth-child(3){
+    flex-basis: 117px;
+  }
+  &__item:nth-child(4){
+    flex-basis: 111px;
+  }
   &__subtitle {
     font-size: 16px;
     line-height: 19px;
@@ -34,21 +50,11 @@
       content: '';
       position: absolute;
       background-color: #ffffff;
-      width: 1171px;
+      width: 100%;
       height: 1px;
       opacity: 0.3;
       top: -36px;
       left: 0;
     }
   }
-}
-.container {
-}
-.row {
-}
-.col-4 {
-}
-.col-3 {
-}
-.col-2 {
 }

@@ -1,6 +1,5 @@
+@import "normalize.scss";
 @import "../fonts/stylesheet.css";
-@import "bootstrap-grid.min.css";
-@import "bootstrap-reboot.min.css";
 @import "./components/header";
 @import "components/button";
 @import "components/promo";
@@ -12,6 +11,20 @@
 @import "components/getaccess";
 @import "components/footer";
 
+$screen-sm: 576px;
+$screen-md: 768px;
+$screen-lg: 992px;
+$screen-xl: 1200px;
+
 * {
   font-family: Roboto;
+}
+
+.section-outer{
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.section-inner{
+  max-width: 1140px;
+  margin: 0 auto;
 }

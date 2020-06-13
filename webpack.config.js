@@ -9,8 +9,9 @@ const ImageMinWebpackPlugin = require('imagemin-webpack-plugin').default;
 const imageminMozjpeg = require ('imagemin-mozjpeg');
 const imageminPngquant = require('imagemin-pngquant');
 
-const filename = ext => isDev ? `[name].${ext}` : `[name].[hash].${ext}`;
 const isDev = process.env.NODE_ENV === 'development';
+const filename = ext => isDev ? `[name].${ext}` : `[name].[hash].${ext}`;
+
 const makeCopiesOfFiles = (path) => {
   return {
     from: path,
@@ -28,7 +29,7 @@ module.exports = {
   },
   plugins: [
     new HTMLWebpackPlugin({
-      filename: filename('html'),
+      filename: 'index.html',
       template: './index.html',
       minify: {
         collapseWhitespace: !isDev
