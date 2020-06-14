@@ -34,7 +34,7 @@
       margin-top: 5px;
     }
   }
-  &__bottom{
+  &__main{
     height: 89%;
     position: relative;
     background: url('../img/bcgr01.jpg') center center/cover no-repeat;
@@ -44,74 +44,8 @@
       display: flex;
       flex-direction: column;
     }
-    .slider{
-      width: 100%;
-      display: flex;
-      flex-grow: 1;
-      align-items: center;
-      .wrap{
-        width: 100%;
-      }
-      .prev, .next{
-        cursor: pointer;
-        display: flex;
-        align-items: center;
-        &:hover{
-          opacity: .5;
-        }
-      }
-      .prev{
-        position: absolute;
-        left: -20px;
-        top: 50%;
-        transform: translateY(-50%);
-      }
-      .next{
-        position: absolute;
-        right: -20px;
-        top: 50%;
-        transform: translateY(-50%);
-        img{
-          transform: rotate(180deg);
-        }
-      }
-    }
-    .slider-dots {
-      position: absolute;
-      bottom: 68px;
-      right: 50%;
-      transform: translateX(50%);
-      display: flex;
-      justify-content: center;
-    }
-    .slider-dots {
-      .dot{
-        cursor: pointer;
-        width: 11px;
-        height: 11px;
-        border: 1px solid #fff;
-        background-color: transparent;
-        border-radius: 50%;
-        &:hover{
-          opacity: .5;
-        }
-        &:not(:first-child){
-          margin-left: 5px;
-        }
-      }
-    }
-    .slider-dots .dot-active {
-      background-color: #ffffff;
-    }
-    .fade {
-      -webkit-animation-name: fade;
-              animation-name: fade;
-      -webkit-animation-duration: 2.5s;
-              animation-duration: 2.5s;
-      -webkit-animation-name: fade;
-      -webkit-animation-duration: 2.5s;
-    }
   }
+
   h1{
     font-size: 42px;
     line-height: 48px;
@@ -139,8 +73,7 @@
     &:not(:first-child){        
       margin-left: 45px;
     }
-    .promo__link {
-     
+    .promo__link {     
       color: #fff;
       text-decoration: none;
       transition: .5s color;
@@ -154,6 +87,7 @@
   &__content {
     // margin-top: 133px;
     display: flex;
+    width: 100%;
   }
   &__inner{
     flex-basis: 50%;
@@ -173,7 +107,77 @@
   }
 
   // ======slider=======
+  &__slider{
+    width: 100%;
+    display: flex;
+    flex-grow: 1;
+    align-items: center;
+    &-wrap{
+      width: 100%;
+      height: 100%;
+    }
+    &-item{
+      height: 100%;
+      display: flex;
+      align-items: center;
+      &-01{
+        background: url('../img/phone.png') no-repeat right bottom;
+      }
+    }
+    &-prev, &-next{
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      &:hover{
+        opacity: .5;
+      }
+    }
+    &-prev{
+      position: absolute;
+      left: -20px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    &-next{
+      position: absolute;
+      right: -20px;
+      top: 50%;
+      transform: translateY(-50%);
+      img{
+        transform: rotate(180deg);
+      }
+    }
+    &-dots {
+      position: absolute;
+      bottom: 68px;
+      right: 50%;
+      transform: translateX(50%);
+      display: flex;
+      justify-content: center;
+    }
+    &-dot{
+      cursor: pointer;
+      width: 11px;
+      height: 11px;
+      border: 1px solid #fff;
+      background-color: transparent;
+      border-radius: 50%;
+      &:hover{
+        opacity: .5;
+      }
+      &:not(:first-child){
+        margin-left: 5px;
+      }
+    }
+    &-dots .dot-active {
+      background-color: #ffffff;
+    }
+  }
   
+  .fade {
+    animation-name: fade;
+    animation-duration: 2.5s;
+  }
   
 }
 
