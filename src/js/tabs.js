@@ -5,7 +5,7 @@ export const tabs = () => {
     tabsArrows = document.querySelector('.decisions__tabs-arrows'),
     activeTab = 0,
     countOfTabs = tabsTriggersItems.length;
-
+    
     tabsTriggers.addEventListener("click", function(event) {
         const target = event.target;
         event.preventDefault();
@@ -24,6 +24,7 @@ export const tabs = () => {
     });
     tabsTriggersItems[0].click()
 
+    //arrows
     tabsArrows.addEventListener('click', function(event) {
         const target = event.target;
         event.preventDefault();

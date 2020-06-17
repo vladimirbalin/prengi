@@ -1,6 +1,6 @@
 .cards {
-  min-height: 896px;
-  padding: 79px 0 0 0;
+  padding-top: 79px;
+  padding-bottom: 80px;
   &__content{
     display: flex;
     justify-content: space-between;
@@ -9,9 +9,10 @@
   &__item {
     position: relative;
     flex-basis: 30%;
-    width: 360px;
-    height: 255px;
-    border: 1.0px solid #ececec;
+    img{
+      height: 100%;
+      width: 100%;
+    }
   }
   &__descr {
     position: absolute;
@@ -52,6 +53,24 @@
       left: 50%;
       transform: translateX(-50%);
       top: -105px;
+    }
+  }
+}
+
+@media(max-width: $screen-lg){
+  .cards{
+    &__content{
+      justify-content: center;
+    }
+    &__item {
+      flex-basis: 75%;
+    }
+  }
+}
+@media(max-width: $screen-lg){
+  .cards{
+    &__item {
+      flex-basis: auto;
     }
   }
 }

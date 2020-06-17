@@ -1,8 +1,9 @@
 .button {
+  display: block;
   box-shadow: 0px 0px 7px 0px rgba(0,0,0,0.07);
   width: 249px;
   height: 68px;
-  background-color: #00c2f0;
+  background-color: $color-main;
   border: 0;
   border-radius: 5px;
   font-size: 16px;
@@ -11,8 +12,9 @@
   text-transform: uppercase;
   color: #ffffff;
   cursor: pointer;
+  transition: .5s background-color;
   &:hover {
-    background-color: #00d1ff;
-    transition: .2s background-color;
+    background-color: lighten($color: $color-main, $amount: 5%);
+    transition: .5s background-color;
   }
 }

@@ -1,17 +1,13 @@
 @import "normalize.scss";
 @import "../fonts/stylesheet.css";
+@import "./variables.scss";
 
-
-$screen-sm: 576px;
-$screen-md: 768px;
-$screen-lg: 992px;
-$screen-xl: 1200px;
 
 * {
   font-family: Roboto;
   box-sizing: border-box;
 }
-ul,p{
+ul, p{
   padding: 0;
   margin: 0;
 }
@@ -20,6 +16,7 @@ ul,p{
   padding-left: 20px;
   padding-right: 20px;
 }
+
 .section-inner{
   max-width: 1140px;
   margin: 0 auto;
@@ -34,3 +31,16 @@ ul,p{
 @import "components/storage";
 @import "components/getaccess";
 @import "components/footer";
+
+@media(max-width: $screen-lg){
+  .section-outer{
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  .title{
+    font-size: 24px;
+    line-height: 24px;
+  }
+}

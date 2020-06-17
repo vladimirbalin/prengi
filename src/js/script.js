@@ -1,5 +1,5 @@
 import "../scss/main.scss";
-import { sliderFirstPage } from './slider-1';
+import { sliderFirstPage } from './slider';
 import { tabs } from './tabs';
 
 window.addEventListener('DOMContentLoaded', function(){

@@ -1,5 +1,4 @@
 .advantages {
-  min-height: 1334px;
   padding-top: 81px;
   &__cards-content{
     display: flex;
@@ -35,5 +34,26 @@
   }
   .title {
     margin-bottom: 44px;
+  }
+}
+
+@media(max-width: $screen-md){
+  .advantages{
+    &__cards-content{
+      justify-content: center;
+    }
+    &__card{
+      flex-basis: 75%;
+    }
+  }
+}
+@media(max-width: $screen-sm){
+  .advantages{
+    &__block{
+      span{
+        font-size: 18px;
+        line-height: 18px;
+      }
+    }
   }
 }

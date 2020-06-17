@@ -1,9 +1,21 @@
 .decisions {
-  min-height: 890px;
   background: url('../img/bcgr02.jpg') center center/cover no-repeat;
-  padding: 79px 0 65px 0;
+  padding-top: 79px;
+  padding-bottom: 65px;
+  position: relative;
+  &::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(51,51,51, .5);
+    z-index: 5;
+  }
   .section-inner{
-    
+    position: relative;
+    z-index: 10;
   }
 
   &__tabs {
@@ -24,11 +36,16 @@
     &-list-item{
       list-style: none;
       position: relative;
+      flex-basis: 16.6%;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-self: center;
       &:not(:last-child){
         &:after{
           content: '';
           position: absolute;
-          right: -30px;
+          right: 0;
           top: 50%;
           transform: translateY(-50%);
           width: 2px;
@@ -38,16 +55,16 @@
       }
     }
     &-item{
-      display: block;
-      height: 100%;
       color: #ffffff;
-      padding: 26px 0 24px 0;
+      font-size: 14px;
+      font-weight: 400;
       text-decoration: none;    
       transition: .5s color;
       &:hover, &--active{
-        color: #00c2f0;
+        color: $color-main;
+        font-weight: 700;
         text-decoration: none;
-        transition: .5s color;
+        transition: .5s all;
       }
     }
     &-content{
@@ -87,6 +104,38 @@
         }
       }
     }
-    
+  }
+}
+
+@media(max-width: $screen-lg){
+  .decisions{
+ 
+  }
+}
+
+@media(max-width: $screen-md){
+  .decisions{
+   
+  }
+}
+@media(max-width: $screen-sm){
+  .decisions{
+    &__tabs{
+      &-item{
+        font-size: 10px;
+        line-height: 10px;
+        padding: 10px 0;
+      }
+      &-triggers{
+        height: auto;
+      }
+      &-list-item{
+        &:not(:last-child){
+          &:after{
+            height: 30px;
+          }
+        }
+      }
+    }
   }
 }

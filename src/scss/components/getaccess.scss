@@ -7,11 +7,20 @@
   .title {
     margin: 74px 0 25px 0;
   }
+  .button {
+    display: block;
+    margin: 0 auto;
+  }
 }
 
 .title-black {
 }
-.button {
-  display: block;
-  margin: 0 auto;
+
+
+@media(max-width:$screen-sm){
+  .togetaccess{
+    &__img{
+      height: 200px;
+    }
+  }
 }
