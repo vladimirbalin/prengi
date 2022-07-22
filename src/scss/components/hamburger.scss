@@ -1,0 +1,115 @@
+.hamburger {
+  position: absolute;
+  top: 50px;
+  right: 50px;
+  height: 60px;
+  width: 60px;
+  background: none;
+  cursor: pointer;
+  transition: .5s all;
+  z-index: 9999;
+  display: none;
+
+  .icon-left {
+    transition-duration: 0.5s;
+    position: absolute;
+    height: 8px;
+    width: 30px;
+    top: 30px;
+    background-color: $color-main;
+    left: 0;
+
+    &:before {
+      transition-duration: 0.5s;
+      position: absolute;
+      width: 30px;
+      height: 8px;
+      background-color: $color-main;
+      content: "";
+      top: -20px;
+    }
+
+    &:after {
+      transition-duration: 0.5s;
+      position: absolute;
+      width: 30px;
+      height: 8px;
+      background-color: $color-main;
+      content: "";
+      top: 20px;
+    }
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  .icon-right {
+    transition-duration: 0.5s;
+    position: absolute;
+    height: 8px;
+    width: 30px;
+    top: 30px;
+    left: 30px;
+    background-color: $color-main;
+
+    &:before {
+      transition-duration: 0.5s;
+      position: absolute;
+      width: 30px;
+      height: 8px;
+      background-color: $color-main;
+      content: "";
+      top: -20px;
+    }
+
+    &:after {
+      transition-duration: 0.5s;
+      position: absolute;
+      width: 30px;
+      height: 8px;
+      background-color: $color-main;
+      content: "";
+      top: 20px;
+    }
+  }
+
+  &.open {
+    .icon-left {
+      transition-duration: 0.5s;
+      background: transparent;
+
+      &:before {
+        transform: rotateZ(45deg) scaleX(1.4) translate(4px, 4px);
+      }
+
+      &:after {
+        transform: rotateZ(-45deg) scaleX(1.4) translate(4px, -4px);
+      }
+    }
+
+    .icon-right {
+      transition-duration: 0.5s;
+      background: transparent;
+
+      &:before {
+        transform: rotateZ(-45deg) scaleX(1.4) translate(-4px, 4px);
+      }
+
+      &:after {
+        transform: rotateZ(45deg) scaleX(1.4) translate(-4px, -4px);
+      }
+    }
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+
+}
+
+@media (max-width: $screen-sm-max) {
+  .hamburger {
+    display: block;
+  }
+}

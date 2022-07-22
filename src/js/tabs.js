@@ -12,8 +12,6 @@ export const tabs = () => {
 
         if(target.classList.contains('decisions__tabs-item') || 
             target.parentNode.classList.contains('decisions__tabs-item')){
-                console.log('hello');
-                
                 tabsTriggersItems.forEach(el => el.classList.remove("decisions__tabs-item--active"))
                 tabsContentItems.forEach(el => el.classList.remove("decisions__tabs-content-item--active"))
                 target.classList.add("decisions__tabs-item--active");

@@ -4,25 +4,29 @@
 
 
 * {
-  font-family: Roboto;
+  font-family: Roboto, sans-serif;
   box-sizing: border-box;
 }
-ul, p{
+
+ul, p {
   padding: 0;
   margin: 0;
 }
 
-.section-outer{
+.section-outer {
   padding-left: 20px;
   padding-right: 20px;
 }
 
-.section-inner{
+.section-inner {
   max-width: 1140px;
   margin: 0 auto;
 }
+
 @import "components/first-page";
 @import "components/button";
+@import "components/header";
+@import "components/hamburger";
 @import "components/promo";
 @import "components/cards";
 @import "components/decisions";
@@ -32,14 +36,14 @@ ul, p{
 @import "components/getaccess";
 @import "components/footer";
 
-@media(max-width: $screen-lg){
-  .section-outer{
+@media(max-width: $screen-lg) {
+  .section-outer {
     padding-left: 10px;
     padding-right: 10px;
     padding-top: 50px;
     padding-bottom: 50px;
   }
-  .title{
+  .title {
     font-size: 24px;
     line-height: 24px;
   }

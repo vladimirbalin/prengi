@@ -1,93 +1,62 @@
 .promo {
-  height: 100vh;
-  .section-inner{
+  min-height: 670px;
+  height: 1px;
+
+  .section-inner {
     display: flex;
     flex-direction: column;
     justify-content: center;
   }
-  .header {
-    height: 11%;
-    padding: 19px 20px 16px 20px;
-    background-color: #fff;
-    &__wrap {
-      display: flex;
-      justify-content: space-between;
-    }
-    &__boxes {
-      display: flex;
-      align-items: flex-start;
-    }
-    &__descr {
-      display: flex;
-      flex-direction: column;
-      padding-left: 11px;
-    }
-    &__strong {
-      font-size: 14px;
-      line-height: 14px;
-      font-weight: 700;
-      color: #242424;
-    }
-    &__adresses {
-      font-size: 12px;
-      font-weight: 300;
-      margin-top: 5px;
-    }
-  }
-  &__main{
-    height: 89%;
+
+  &__main {
+    min-height: 670px;
     background: url('../img/bcgr01.jpg') center center/cover no-repeat;
     padding-top: 39px;
     position: relative;
-    &::before{
-      content: '';
-      position: absolute;
-      top: 0;
-      right: 0;
-      left: 0;
-      bottom: 0;
-      background-color: rgba(51,51,51, .4);
-      z-index: 5;
-    }
-    .section-inner{
-      position: relative;
-      z-index: 10;
-      height: 100%;
+
+    .section-inner {
       display: flex;
       flex-direction: column;
     }
   }
-  &__title{
+
+  &__title {
     font-size: 42px;
     line-height: 42px;
     font-weight: 900;
     color: #ffffff;
   }
-  &-400{
+
+  &-400 {
     font-weight: 400;
   }
+
   &__header {
     display: flex;
     align-items: center;
     justify-content: space-between;
   }
+
   &__menu {
-    display: flex;
-  }
-  &__list-item{
     list-style: none;
+    display: flex;
     font-size: 13px;
     line-height: 26px;
     font-weight: 700;
     text-transform: uppercase;
     color: #ffffff;
-    &:not(:first-child){        
+  }
+
+  &__list-item {
+    &:not(:first-child) {
       margin-left: 45px;
     }
-    .promo__link {     
+
+    .promo__link {
       color: #fff;
       text-decoration: none;
       transition: .5s color;
+
       &:hover {
         color: $color-main;
         transition: .5s color;
@@ -95,17 +64,22 @@
       }
     }
   }
+
   &__content {
+    position: relative;
     display: flex;
     width: 100%;
   }
-  &__inner{
+
+  &__inner {
     flex-basis: 50%;
     justify-content: flex-start;
-    .button{
+
+    .button {
       margin-top: 35px;
     }
   }
+
   &__descr {
     display: block;
     margin-top: 27px;
@@ -115,46 +89,57 @@
     color: #ffffff;
   }
 
+  &__image {
+    position: absolute;
+    right: 0;
+    bottom: -263px;
+  }
+
   // ======slider=======
-  &__slider{
+  &__slider {
     width: 100%;
     display: flex;
     flex-direction: column;
     flex-grow: 1;
     align-items: center;
-    &-wrap{
+
+    &-wrap {
       width: 100%;
       height: 100%;
     }
-    &-item{
+
+    &-item {
       height: 100%;
       display: flex;
       align-items: center;
-      &-01{
-        background: url('../img/phone.png') no-repeat right bottom;
-      }
     }
-    &-prev, &-next{
+
+    &-prev, &-next {
       cursor: pointer;
       display: flex;
       align-items: center;
-      &:hover{
+
+      &:hover {
         svg {
-          .arrow{
+          .arrow {
             fill: $color-main;
           }
         }
       }
     }
-    &-prev{
+
+    &-prev {
       margin-right: 13px;
     }
-    &-next{
+
+    &-next {
       margin-left: 13px;
-      svg{
+
+      svg {
         transform: rotate(180deg);
       }
     }
+
     &-dots {
       display: flex;
       justify-content: center;
@@ -163,30 +148,34 @@
       left: 50%;
       transform: translateX(-50%);
     }
-    &-dot{
+
+    &-dot {
       cursor: pointer;
       width: 11px;
       height: 11px;
       border: 1px solid #fff;
       background-color: transparent;
       border-radius: 50%;
-      &:hover{
+
+      &:hover {
         background-color: #ffffff;
       }
-      &:not(:first-child){
+
+      &:not(:first-child) {
         margin-left: 5px;
       }
     }
+
     &-dots .dot-active {
       background-color: #ffffff;
     }
   }
-  
+
   .fade {
     animation-name: fade;
     animation-duration: 2.5s;
   }
-  
+
 }
 
 @keyframes fade {
@@ -199,91 +188,112 @@
 }
 
 
-@media(max-width: $screen-md-max){
-  .promo{
-    .header{
-      height: 21%;
-      &__wrap{
-        flex-wrap: wrap;
-      }
-      &__boxes{
-        flex-basis: 50%;
-        &:not(:last-child){
-          margin-bottom: 10px;
-        }
-      }
+@media(max-width: $screen-md-max) {
+  .promo {
+    .section-inner {
+      height: 100%;
     }
-    &__main{
-      height: 79%;
+
+    &__main {
+      height: 100%;
     }
-    &__slider{
-      &-item{
-        &-01{
+
+    &__image {
+      display: none;
+    }
+
+    &__slider {
+      min-height: 100%;
+
+      &-item {
+        &-01 {
           background: none;
         }
       }
-      &-dots{
-        bottom: 0;
+
+      &-dots {
+        bottom: 100px;
       }
     }
-    &__inner{
+
+    &__inner {
       flex-basis: auto;
-      .button{
+      width: 100%;
+
+      .button {
         margin: 0 auto;
       }
     }
-    .button{
+
+    .button {
       margin: 40px auto 0 auto;
     }
   }
 }
-@media(max-width: $screen-md){
-  .promo{
-    .header{
-      &__strong{
-        font-size: 12px;
+
+@media (max-width: $screen-sm-max) {
+  .promo {
+    &__menu {
+      position: fixed;
+      top: 0;
+      right: -100%;
+      height: 100%;
+      width: 80%;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      background-color: rgba(0, 0, 0, .9);
+      z-index: 9998;
+      font-size: 32px;
+    }
+
+    &__menu--active {
+      transition: all linear;
+      transition-duration: 500ms;
+      right: 0;
+    }
+
+    &__list-item {
+      &:not(:first-child) {
+        margin: 0;
       }
-      &__adresses{
-        font-size: 10px;
+
+      .promo__link {
+        padding: 50px;
       }
     }
 
-    
   }
 }
-@media(max-width: $screen-xs-max){
-  .promo{
-    &__menu{
+
+@media(max-width: $screen-xs-max) {
+  .promo {
+    &__menu {
       flex-wrap: wrap;
     }
-    &__list-item{
+
+    &__list-item {
       font-size: 10px;
       line-height: 10px;
-      &:not(:first-child){        
+
+      &:not(:first-child) {
         margin-left: 25px;
       }
     }
-    &__logo{
+
+    &__logo {
       width: 100px;
     }
-    .header{
-      padding-top: 5px;
-      padding-bottom: 5px;
-      &__boxes{
-        flex-basis: 50%;
-        &:not(:last-child){
-          margin-bottom: 3px;
-        }
-      }
-    }
-    &__slider{
-      &-item{
-        &-01{
+
+    &__slider {
+      &-item {
+        &-01 {
           background-size: 40%;
         }
       }
     }
-    .button{
+
+    .button {
       margin-top: 25px;
     }
   }

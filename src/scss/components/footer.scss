@@ -2,58 +2,69 @@
   padding-top: 49px;
   padding-bottom: 40px;
   background-color: #0082a1;
-  &__content{
+
+  &__content {
     display: flex;
     justify-content: space-between;
   }
-  &__item{
+
+  &__item {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    
-    img{
+
+    img {
       margin: 20px 0;
     }
   }
-  &__list-item{
+
+  &__list-item {
     list-style: none;
     font-size: 14px;
     font-weight: 300;
     margin-top: 10px;
   }
-  &__item:nth-child(1){
+
+  &__item:nth-child(1) {
     flex-basis: 377px;
   }
-  &__item:nth-child(2){
+
+  &__item:nth-child(2) {
     flex-basis: 265px;
   }
-  &__item:nth-child(3){
+
+  &__item:nth-child(3) {
     flex-basis: 119px;
   }
-  &__item:nth-child(4){
+
+  &__item:nth-child(4) {
     flex-basis: 113px;
   }
+
   &__subtitle {
     font-size: 16px;
     line-height: 19px;
     font-weight: 700;
     color: #ffffff;
   }
+
   &__descr {
     font-size: 14px;
     line-height: 19px;
     font-weight: 300;
     color: #ffffff;
   }
-  &__link{
+
+  &__link {
     color: #ffffff;
     text-decoration: none;
-    &:hover{
+
+    &:hover {
       text-decoration: underline;
     }
   }
-  
-  &__copyright{
+
+  &__copyright {
     margin-top: 81px;
     font-size: 13px;
     line-height: 17px;
@@ -61,7 +72,8 @@
     color: #ffffff;
     text-align: center;
     position: relative;
-    &:before{
+
+    &:before {
       content: '';
       position: absolute;
       background-color: #ffffff;
@@ -74,37 +86,17 @@
   }
 }
 
-@media(max-width: $screen-md){
-  .footer {  
-    &__item:nth-child(1){
-      flex-basis: 43.13%;
-    }
-    &__item:nth-child(2){
-      flex-basis: 26.32%;
-    }
-    &__item:nth-child(3){
-      flex-basis: 15.61%;
-    }
-    &__item:nth-child(4){
-      flex-basis: 10.92%;
-    }
-  }
-}
+@media(max-width: $screen-md) {
+  .footer {
+    &__content {
+      flex-wrap: wrap;
 
-@media(max-width: $screen-sm){
-  .footer{
-    &__descr{
-      font-size: 12px;
-      line-height: 12px;
+      .footer__item {
+        flex-basis: 100%;
+        align-items: center;
+        padding: 20px;
+      }
     }
-    &__subtitle{
-      font-size: 14px;
-      line-height: 14px;
-    }
-    &__list-item{
-      font-size: 10px;
-      line-height: 10px;
-    }
-  }
 
+  }
 }

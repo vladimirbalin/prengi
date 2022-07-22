@@ -2,20 +2,8 @@
   background: url('../img/bcgr02.jpg') center center/cover no-repeat;
   padding-top: 79px;
   padding-bottom: 65px;
-  position: relative;
-  &::before{
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background-color: rgba(51,51,51, .5);
-    z-index: 5;
-  }
+  min-height: 890px;
   .section-inner{
-    position: relative;
-    z-index: 10;
   }
 
   &__tabs {
@@ -76,7 +64,7 @@
         img{
           display: block;
           margin: 0 auto;
-          max-width: 100%;
+          max-width: 90%;
         }
       }
       &-item--active{
@@ -109,7 +97,7 @@
 
 @media(max-width: $screen-lg){
   .decisions{
- 
+    min-height: auto;
   }
 }
 
