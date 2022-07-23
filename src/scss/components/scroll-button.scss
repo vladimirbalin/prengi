@@ -1,0 +1,20 @@
+.pageup {
+  display: none;
+  position: fixed;
+  bottom: 35px;
+  right: 35px;
+  width: 55px;
+  cursor: pointer;
+  text-align: center;
+  transition-duration: 500ms;
+
+  svg {
+    fill: $color-main;
+  }
+
+  &:hover {
+    svg {
+      fill: lighten($color: $color-main, $amount: 5%);
+    }
+  }
+}

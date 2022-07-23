@@ -8,6 +8,10 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 ul, p {
   padding: 0;
   margin: 0;
@@ -36,6 +40,7 @@ ul, p {
 @import "components/getaccess";
 @import "components/footer";
 @import "components/modal";
+@import "components/scroll-button";
 
 
 @media(max-width: $screen-lg) {
