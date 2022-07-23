@@ -35,6 +35,8 @@ ul, p {
 @import "components/storage";
 @import "components/getaccess";
 @import "components/footer";
+@import "components/modal";
+
 
 @media(max-width: $screen-lg) {
   .section-outer {
