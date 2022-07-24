@@ -1,24 +1,7 @@
 .promo {
   min-height: 670px;
   height: 1px;
-
-  .section-inner {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-
-  &__main {
-    min-height: 670px;
-    background: url('../img/bcgr01.jpg') center center/cover no-repeat;
-    padding-top: 39px;
-    position: relative;
-
-    .section-inner {
-      display: flex;
-      flex-direction: column;
-    }
-  }
+  position: relative;
 
   &__title {
     font-size: 42px;
@@ -32,9 +15,18 @@
   }
 
   &__header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding-top: 39px;
+    z-index: 2;
+
+    .section-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
   }
 
   &__menu {
@@ -67,7 +59,6 @@
   }
 
   &__content {
-    position: relative;
     display: flex;
     width: 100%;
   }
@@ -93,16 +84,26 @@
   &__image {
     position: absolute;
     right: 0;
-    bottom: -263px;
+    bottom: 0;
   }
 
   // ======slider=======
   &__slider {
     width: 100%;
+    height: 100%;
     display: flex;
     flex-direction: column;
     flex-grow: 1;
     align-items: center;
+
+    .section-inner {
+      max-width: 1140px;
+      margin: 0 auto;
+      height: 100%;
+      position: relative;
+      display: flex;
+      align-items: center;
+    }
 
     &-wrap {
       width: 100%;
@@ -111,8 +112,27 @@
 
     &-item {
       height: 100%;
-      display: flex;
-      align-items: center;
+    }
+
+    &-item-01 {
+      background: url('../img/bcgr01.jpg') center center/cover no-repeat;
+    }
+
+    &-item-02 {
+      background: url('../img/bcgr04.jpg') center center/cover no-repeat;
+      background-color: rgba(0,0,0, 0.5);
+    }
+
+    &-item-03 {
+      background: url('../img/bcgr05.jpg') center center/cover no-repeat;
+    }
+
+    &-item-04 {
+      background: url('../img/bcgr06.jpg') center center/cover no-repeat;
+    }
+
+    &-item-05 {
+      background: url('../img/bcgr07.jpg') center center/cover no-repeat;
     }
 
     &-prev, &-next {
@@ -195,22 +215,12 @@
       height: 100%;
     }
 
-    &__main {
-      height: 100%;
-    }
-
     &__image {
       display: none;
     }
 
     &__slider {
       min-height: 100%;
-
-      &-item {
-        &-01 {
-          background: none;
-        }
-      }
 
       &-dots {
         bottom: 100px;
@@ -274,8 +284,6 @@
     }
 
     &__list-item {
-      font-size: 10px;
-      line-height: 10px;
 
       &:not(:first-child) {
         margin-left: 25px;
@@ -284,14 +292,6 @@
 
     &__logo {
       width: 100px;
-    }
-
-    &__slider {
-      &-item {
-        &-01 {
-          background-size: 40%;
-        }
-      }
     }
 
     .button {

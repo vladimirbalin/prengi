@@ -20,7 +20,7 @@ export const sliderFirstPage = () => {
     slides.forEach((item) => (item.style.display = "none"));
     dots.forEach((item) => item.classList.remove("dot-active"));
 
-    slides[slideIndex - 1].style.display = "flex";
+    slides[slideIndex - 1].style.display = "block";
     dots[slideIndex - 1].classList.add("dot-active");
   }
 
