@@ -40,6 +40,8 @@
   }
 
   &__list-item {
+    text-align: center;
+
     &:not(:first-child) {
       margin-left: 45px;
     }
@@ -120,7 +122,7 @@
 
     &-item-02 {
       background: url('../img/bcgr04.jpg') center center/cover no-repeat;
-      background-color: rgba(0,0,0, 0.5);
+      background-color: rgba(0, 0, 0, 0.5);
     }
 
     &-item-03 {
@@ -269,9 +271,11 @@
         margin: 0;
       }
 
-      .promo__link {
-        padding: 50px;
-      }
+
+    }
+
+    &__link {
+      padding: 50px;
     }
 
   }
@@ -296,6 +300,14 @@
 
     .button {
       margin-top: 25px;
+    }
+  }
+}
+
+@media (max-width: $screen-xs-max) {
+  .promo {
+    &__link {
+      padding: 5px;
     }
   }
 }
