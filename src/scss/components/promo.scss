@@ -37,6 +37,7 @@
     font-weight: 700;
     text-transform: uppercase;
     color: #ffffff;
+    transition: .5s right linear;
   }
 
   &__list-item {
@@ -261,8 +262,6 @@
     }
 
     &__menu--active {
-      transition: all linear;
-      transition-duration: 500ms;
       right: 0;
     }
 
