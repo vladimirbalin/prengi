@@ -38,6 +38,7 @@ module.exports = {
     new CleanWebpackPlugin(),
     new CopyWPPlugin([
       makeCopiesOfFiles('img'),
+      makeCopiesOfFiles('site.webmanifest'),
     ]),
     new ImageMinWebpackPlugin({
       test: /\.(jpe?g|png|gif|svg)$/i,
