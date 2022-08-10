@@ -16,7 +16,7 @@
     height: 8px;
     width: 30px;
     top: 30px;
-    background-color: $color-main;
+    background-color: #ffffff;
     left: 0;
 
     &:before {
@@ -24,7 +24,7 @@
       position: absolute;
       width: 30px;
       height: 8px;
-      background-color: $color-main;
+      background-color: #ffffff;
       content: "";
       top: -20px;
     }
@@ -34,7 +34,7 @@
       position: absolute;
       width: 30px;
       height: 8px;
-      background-color: $color-main;
+      background-color: #ffffff;
       content: "";
       top: 20px;
     }
@@ -51,14 +51,14 @@
     width: 30px;
     top: 30px;
     left: 30px;
-    background-color: $color-main;
+    background-color: #ffffff;
 
     &:before {
       transition-duration: 0.5s;
       position: absolute;
       width: 30px;
       height: 8px;
-      background-color: $color-main;
+      background-color: #ffffff;
       content: "";
       top: -20px;
     }
@@ -68,7 +68,7 @@
       position: absolute;
       width: 30px;
       height: 8px;
-      background-color: $color-main;
+      background-color: #ffffff;
       content: "";
       top: 20px;
     }
