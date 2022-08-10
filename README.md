@@ -29,6 +29,6 @@ npm run start
 ## Tech stack used
 
 - HTML
-- CSS (scss preprocessor)
-- JavaScript
+- CSS (SCSS)
+- Vanilla JavaScript
 
